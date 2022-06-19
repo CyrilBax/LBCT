@@ -1,7 +1,10 @@
 plugins {
     id "com.android.library"
     id "kotlin-android"
+    id "kotlin-kapt"
+    id("dagger.hilt.android.plugin")
 }
 
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_viewmodel.gradle"
+apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
