@@ -4,7 +4,7 @@ plugins {
 }
 
 apply from: "$project.rootDir/gradle/default_build.gradle"
-apply from: "$project.rootDir/gradle/default_navigation.gradle"
+apply from: "$project.rootDir/gradle/dependencies_navigation.gradle"
 
 android {
     defaultConfig {
