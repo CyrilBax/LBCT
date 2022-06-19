@@ -1,0 +1,7 @@
+plugins {
+    id "com.android.library"
+    id "kotlin-android"
+}
+
+apply from: "$project.rootDir/gradle/default_build.gradle"
+apply from: "$project.rootDir/gradle/default_viewmodel.gradle"

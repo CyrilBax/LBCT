@@ -1,0 +1,19 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+}
+
+apply from: "$project.rootDir/gradle/default_build.gradle"
+apply from: "$project.rootDir/gradle/default_navigation.gradle"
+
+android {
+    defaultConfig {
+        applicationId "com.example.lbct"
+    }
+}
+dependencies {
+    api project(':albumlist')
+}
+repositories {
+    mavenCentral()
+}
