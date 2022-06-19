@@ -1,4 +1,4 @@
-package com.example.albumlist.ui.main
+package com.example.album.feature
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,21 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.albumlist.databinding.AlbumListFragmentBinding
+import com.example.album.feature.databinding.AlbumFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class AlbumListFragment : Fragment() {
 
     private val viewModel: MainViewModel by viewModels()
-    private lateinit var binding: AlbumListFragmentBinding
+    private lateinit var binding: AlbumFragmentBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = AlbumListFragmentBinding.inflate(layoutInflater)
+        binding = AlbumFragmentBinding.inflate(layoutInflater)
         return binding.root
     }
 

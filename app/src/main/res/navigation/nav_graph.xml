@@ -7,8 +7,8 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.example.albumlist.ui.main.AlbumListFragment"
-        android:label="@string/album_list"
-        tools:layout="@layout/album_list_fragment">
+        android:name="com.example.album.feature.AlbumListFragment"
+        android:label="@string/album"
+        tools:layout="@layout/album_fragment">
     </fragment>
 </navigation>

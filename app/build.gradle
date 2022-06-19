@@ -14,9 +14,11 @@ android {
         applicationId "com.example.lbct"
     }
 }
+
 dependencies {
-    api project(':albumlist')
+    api project(':album:album-feature')
 }
+
 repositories {
     mavenCentral()
 }

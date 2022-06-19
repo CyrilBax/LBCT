@@ -7,4 +7,6 @@ pluginManagement {
 }
 rootProject.name = "LBCT"
 include ':app'
-include ':albumlist'
+include ':album:album-feature'
+include ':album:album-data'
+include ':album:album-domain'

@@ -1,11 +1,11 @@
-package com.example.albumlist.ui.main
+package com.example.album.feature
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 
-@HiltViewModel
+//@HiltViewModel
 class MainViewModel : ViewModel() {
 
     val text: LiveData<String>

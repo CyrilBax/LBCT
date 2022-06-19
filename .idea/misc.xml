@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="albulmlist/src/main/res/layout/main_fragment.xml" value="0.24427083333333333" />
+        <entry key="album/album-feature/src/main/res/layout/album_fragment.xml" value="0.25833333333333336" />
+        <entry key="album/album-feature/src/main/res/layout/album_list_fragment.xml" value="0.19375" />
         <entry key="albumlist/src/main/res/layout/album_list_activity.xml" value="0.4361413043478261" />
         <entry key="albumlist/src/main/res/layout/album_list_fragment.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />

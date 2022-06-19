@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">LBCT</string>
-    <string name="album_list">album list</string>
+    <string name="album">album list</string>
 </resources>
