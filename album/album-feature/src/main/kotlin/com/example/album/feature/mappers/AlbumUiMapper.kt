@@ -5,7 +5,8 @@ import com.example.album_data.datasources.models.AlbumModel
 import com.example.extensions.commons.Mapper
 import javax.inject.Inject
 
-class AlbumUiMapper @Inject constructor()  : Mapper<List<@JvmSuppressWildcards AlbumModel>, List<@JvmSuppressWildcards AlbumModelUi>> {
+class AlbumUiMapper @Inject constructor() :
+    Mapper<List<@JvmSuppressWildcards AlbumModel>, List<@JvmSuppressWildcards AlbumModelUi>> {
 
     override fun mapTo(from: List<AlbumModel>): List<AlbumModelUi> {
         return from.map { mapTo(it) }

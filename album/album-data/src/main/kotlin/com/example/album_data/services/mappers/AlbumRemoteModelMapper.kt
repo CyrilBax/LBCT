@@ -1,11 +1,12 @@
 package com.example.album_data.services.mappers
 
-import com.example.extensions.commons.Mapper
-import com.example.album_data.services.models.AlbumRemoteModel
 import com.example.album_data.datasources.models.AlbumModel
+import com.example.album_data.services.models.AlbumRemoteModel
+import com.example.extensions.commons.Mapper
 import javax.inject.Inject
 
-class AlbumRemoteModelMapper @Inject constructor() : Mapper<List<@JvmSuppressWildcards AlbumRemoteModel>, List<@JvmSuppressWildcards AlbumModel>> {
+class AlbumRemoteModelMapper @Inject constructor() :
+    Mapper<List<@JvmSuppressWildcards AlbumRemoteModel>, List<@JvmSuppressWildcards AlbumModel>> {
 
     override fun mapTo(from: List<AlbumRemoteModel>): List<AlbumModel> {
         return from.map { mapToModel(it) }

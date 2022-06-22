@@ -9,6 +9,5 @@
         android:id="@+id/FirstFragment"
         android:name="com.example.album.feature.AlbumListFragment"
         android:label="@string/album"
-        tools:layout="@layout/album_fragment">
-    </fragment>
+        tools:layout="@layout/album_fragment"></fragment>
 </navigation>

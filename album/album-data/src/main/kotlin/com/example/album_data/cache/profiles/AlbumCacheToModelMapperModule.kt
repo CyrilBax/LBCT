@@ -4,7 +4,6 @@ import com.example.album_data.cache.AlbumEntity
 import com.example.album_data.cache.mappers.AlbumCacheToModelMapper
 import com.example.album_data.datasources.models.AlbumModel
 import com.example.extensions.commons.Mapper
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 
@@ -17,5 +16,6 @@ abstract class AlbumCacheToModelMapperModule {
 @Module
 class AlbumCacheToModelMapperModule {
     @Provides
-    fun provideAlbumCacheToModelMapper(): Mapper<List<AlbumEntity>, List<AlbumModel>> = AlbumCacheToModelMapper()
+    fun provideAlbumCacheToModelMapper(): Mapper<List<AlbumEntity>, List<AlbumModel>> =
+        AlbumCacheToModelMapper()
 }

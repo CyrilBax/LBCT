@@ -11,7 +11,6 @@ import com.example.extensions.commons.Mapper
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import timber.log.Timber
 import javax.inject.Inject
 
 @HiltViewModel
@@ -28,8 +27,6 @@ class MainViewModel @Inject constructor(
     }
 
     fun getAlbumList(page: Int) {
-        Timber.d("first")
-        _text.value = ""
         viewModelScope.launch(Dispatchers.IO) {
             val result = mapper.mapTo(
                 getAlbumListUseCase.execute(page)

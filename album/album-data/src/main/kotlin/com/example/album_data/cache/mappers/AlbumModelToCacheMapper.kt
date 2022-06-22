@@ -5,7 +5,8 @@ import com.example.album_data.datasources.models.AlbumModel
 import com.example.extensions.commons.Mapper
 import javax.inject.Inject
 
-class AlbumModelToCacheMapper @Inject constructor()  : Mapper<List<@JvmSuppressWildcards AlbumModel>, List<@JvmSuppressWildcards AlbumEntity>> {
+class AlbumModelToCacheMapper @Inject constructor() :
+    Mapper<List<@JvmSuppressWildcards AlbumModel>, List<@JvmSuppressWildcards AlbumEntity>> {
 
     override fun mapTo(from: List<AlbumModel>): List<AlbumEntity> {
         return from.map { mapTo(it) }

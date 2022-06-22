@@ -32,14 +32,18 @@ class AlbumListFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.shimmerView.startShimmer()
 
         viewModel.text.observe(viewLifecycleOwner) {
-            binding.message.text = it
+            binding.shimmerView.apply {
+                stopShimmer()
+                visibility = View.GONE
+            }
+            binding.message.apply {
+                text = it
+                visibility = View.VISIBLE
+            }
         }
-    }
-
-    companion object {
-        fun newInstance() = AlbumListFragment()
     }
 
 }

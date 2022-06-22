@@ -13,5 +13,5 @@ import dagger.hilt.android.components.ViewModelComponent
 @Module
 abstract class AlbumUiMapperModule {
     @Binds
-    abstract fun bindAlbumUiMapper(albumUiMapper: AlbumUiMapper) : Mapper<List<AlbumModel>, List<AlbumModelUi>>
+    abstract fun bindAlbumUiMapper(albumUiMapper: AlbumUiMapper): Mapper<List<AlbumModel>, List<AlbumModelUi>>
 }
