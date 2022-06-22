@@ -8,6 +8,7 @@ plugins {
 apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_coroutines.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
+apply from: "$project.rootDir/gradle/dependencies_unit_test.gradle"
 
 dependencies {
     api project(':album:album-data')

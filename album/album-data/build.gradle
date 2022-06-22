@@ -11,6 +11,7 @@ apply from: "$project.rootDir/gradle/dependencies_coroutines.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 apply from: "$project.rootDir/gradle/dependencies_okhttp.gradle"
 apply from: "$project.rootDir/gradle/dependencies_retrofit.gradle"
+apply from: "$project.rootDir/gradle/dependencies_unit_test.gradle"
 
 dependencies {
     implementation project(':extensions')
