@@ -9,6 +9,7 @@ apply from: "$project.rootDir/gradle/default_build.gradle"
 apply from: "$project.rootDir/gradle/dependencies_viewmodel.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 apply from: "$project.rootDir/gradle/dependencies_shimmer.gradle"
+apply from: "$project.rootDir/gradle/dependencies_picasso.gradle"
 
 dependencies {
     api project(':album:album-domain')

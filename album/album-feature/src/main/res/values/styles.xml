@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Widget.MaterialComponents.CircularProgressIndicator.LBCT">
+        <item name="trackThickness">@dimen/circular_progress_indicator_thickness</item>
+        <item name="indicatorSize">@dimen/circular_progress_indicator_size</item>
+    </style>
+</resources>

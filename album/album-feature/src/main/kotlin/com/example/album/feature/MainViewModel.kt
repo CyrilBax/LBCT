@@ -19,11 +19,11 @@ class MainViewModel @Inject constructor(
     private val mapper: Mapper<List<AlbumModel>, List<AlbumModelUi>>
 ) : ViewModel() {
 
-    val text: LiveData<String>
-        get() = _text
+    val albumList: LiveData<List<AlbumModelUi>>
+        get() = _albumList
 
-    private val _text: MutableLiveData<String> by lazy {
-        MutableLiveData<String>()
+    private val _albumList: MutableLiveData<List<AlbumModelUi>> by lazy {
+        MutableLiveData<List<AlbumModelUi>>()
     }
 
     fun getAlbumList(page: Int) {
@@ -31,8 +31,7 @@ class MainViewModel @Inject constructor(
             val result = mapper.mapTo(
                 getAlbumListUseCase.execute(page)
             )
-
-            _text.postValue(result.first().title)
+            _albumList.postValue(result)
         }
     }
 }

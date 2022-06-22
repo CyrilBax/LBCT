@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Margin -->
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="album_item_margin">16dp</dimen>
+    <dimen name="album_item_picture_shimmer_margin_top">50dp</dimen>
+    <dimen name="album_item_picture_shimmer_margin_end">25dp</dimen>
+    <dimen name="album_item_picture_shimmer_margin_start">25dp</dimen>
+
+    <!-- Padding -->
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+
+    <!-- Circular indicator -->
+    <dimen name="circular_progress_indicator_size">50dp</dimen>
+    <dimen name="circular_progress_indicator_thickness">3dp</dimen>
+
+    <!-- Album item -->
+    <dimen name="album_item_picture_size">150dp</dimen>
+    <dimen name="album_item_picture_shimmer_size">150dp</dimen>
+    <dimen name="album_item_title_shimmer_height">16dp</dimen>
+    <dimen name="album_item_title_shimmer_width">150dp</dimen>
+
+    <!-- CardView -->
+    <dimen name="card_elevation">10dp</dimen>
+    <dimen name="card_radius">6dp</dimen>
+</resources>
