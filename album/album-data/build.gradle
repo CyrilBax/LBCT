@@ -10,3 +10,8 @@ apply from: "$project.rootDir/gradle/dependencies_room.gradle"
 apply from: "$project.rootDir/gradle/dependencies_coroutines.gradle"
 apply from: "$project.rootDir/gradle/dependencies_hilt.gradle"
 apply from: "$project.rootDir/gradle/dependencies_okhttp.gradle"
+apply from: "$project.rootDir/gradle/dependencies_retrofit.gradle"
+
+dependencies {
+    implementation project(':extensions')
+}

@@ -16,7 +16,8 @@ android {
 }
 
 dependencies {
-    api project(':album:album-feature')
+    implementation project(':album:album-feature')
+    implementation project(':extensions')
 }
 
 repositories {

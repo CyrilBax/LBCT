@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/album/album-domain" />
             <option value="$PROJECT_DIR$/album/album-feature" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/extensions" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

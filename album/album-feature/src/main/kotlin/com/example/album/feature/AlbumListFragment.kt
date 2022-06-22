@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.album.feature.databinding.AlbumFragmentBinding
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 
 @AndroidEntryPoint
 class AlbumListFragment : Fragment() {
@@ -25,7 +26,8 @@ class AlbumListFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel.getAlbumList(0)
+        Timber.d("on cerate")
+        viewModel.getAlbumList(1)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
