@@ -12,19 +12,6 @@ abstract class AlbumDataBase : RoomDatabase() {
 
     private lateinit var INSTANCE: AlbumDataBase
 
-    fun getDataBase(context: Context): AlbumDataBase {
-        synchronized(AlbumDataBase::class.java) {
-            if (!::INSTANCE.isInitialized) {
-                INSTANCE = Room.databaseBuilder(
-                    context.applicationContext,
-                    AlbumDataBase::class.java,
-                    DATA_BASE_NAME
-                ).build()
-            }
-            return INSTANCE
-        }
-    }
-
     companion object {
         const val DATA_BASE_NAME = "ALBUM"
     }

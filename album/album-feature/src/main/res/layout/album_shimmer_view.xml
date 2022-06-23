@@ -10,17 +10,15 @@
     app:layout_constraintTop_toTopOf="parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintHorizontal_chainStyle="spread">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/image1"
             android:layout_width="@dimen/album_item_picture_shimmer_size"
             android:layout_height="@dimen/album_item_picture_shimmer_size"
-            android:layout_marginStart="@dimen/album_item_picture_shimmer_margin_start"
             android:layout_marginTop="@dimen/album_item_picture_shimmer_margin_top"
-            android:layout_marginEnd="@dimen/album_item_picture_shimmer_margin_end"
             android:background="#dddddd"
             app:layout_constraintEnd_toStartOf="@+id/image3"
             app:layout_constraintStart_toStartOf="parent"
@@ -40,9 +38,7 @@
             android:id="@+id/image2"
             android:layout_width="@dimen/album_item_picture_shimmer_size"
             android:layout_height="@dimen/album_item_picture_shimmer_size"
-            android:layout_marginStart="@dimen/album_item_picture_shimmer_margin_start"
             android:layout_marginTop="@dimen/album_item_picture_shimmer_margin_top"
-            android:layout_marginEnd="@dimen/album_item_picture_shimmer_margin_end"
             android:background="#dddddd"
             app:layout_constraintEnd_toStartOf="@+id/image4"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,6 +93,46 @@
             app:layout_constraintEnd_toEndOf="@+id/image4"
             app:layout_constraintStart_toStartOf="@+id/image4"
             app:layout_constraintTop_toBottomOf="@+id/image4" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image5"
+            android:layout_width="@dimen/album_item_picture_shimmer_size"
+            android:layout_height="@dimen/album_item_picture_shimmer_size"
+            android:layout_marginTop="@dimen/album_item_picture_shimmer_margin_top"
+            android:background="#dddddd"
+            app:layout_constraintEnd_toEndOf="@id/text2"
+            app:layout_constraintStart_toStartOf="@id/text2"
+            app:layout_constraintTop_toBottomOf="@id/text2" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="@dimen/album_item_title_shimmer_width"
+            android:layout_height="@dimen/album_item_title_shimmer_height"
+            android:layout_marginTop="@dimen/album_item_margin"
+            android:background="#dddddd"
+            app:layout_constraintEnd_toEndOf="@+id/image5"
+            app:layout_constraintStart_toStartOf="@+id/image5"
+            app:layout_constraintTop_toBottomOf="@+id/image5" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image6"
+            android:layout_width="@dimen/album_item_picture_shimmer_size"
+            android:layout_height="@dimen/album_item_picture_shimmer_size"
+            android:layout_marginTop="@dimen/album_item_picture_shimmer_margin_top"
+            android:background="#dddddd"
+            app:layout_constraintEnd_toEndOf="@id/text4"
+            app:layout_constraintStart_toStartOf="@id/text4"
+            app:layout_constraintTop_toBottomOf="@id/text4" />
+
+        <TextView
+            android:id="@+id/text6"
+            android:layout_width="@dimen/album_item_title_shimmer_width"
+            android:layout_height="@dimen/album_item_title_shimmer_height"
+            android:layout_marginTop="@dimen/album_item_margin"
+            android:background="#dddddd"
+            app:layout_constraintEnd_toEndOf="@+id/image6"
+            app:layout_constraintStart_toStartOf="@+id/image6"
+            app:layout_constraintTop_toBottomOf="@+id/image6" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
