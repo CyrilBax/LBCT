@@ -12,6 +12,8 @@
         <entry key="album/album-feature/src/main/res/layout/album_shimmer_view.xml" value="0.37907608695652173" />
         <entry key="albumlist/src/main/res/layout/album_list_activity.xml" value="0.4361413043478261" />
         <entry key="albumlist/src/main/res/layout/album_list_fragment.xml" value="0.22395833333333334" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2845" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.2845" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.25833333333333336" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.25833333333333336" />
