@@ -4,5 +4,5 @@ import com.example.album_data.services.models.AlbumRemoteModel
 
 interface AlbumService {
 
-    suspend fun getAlbumList(page: Int): List<AlbumRemoteModel>
+    suspend fun getAlbumList(): List<AlbumRemoteModel>
 }

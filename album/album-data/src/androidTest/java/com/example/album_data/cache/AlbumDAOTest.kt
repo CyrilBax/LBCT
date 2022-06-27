@@ -4,12 +4,14 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.google.common.truth.Truth.assertThat
-import com.nhaarman.mockito_kotlin.mock
+import com.example.album_data.factories.AlbumEntityFactory
+import org.hamcrest.CoreMatchers.equalTo
+import org.hamcrest.MatcherAssert.assertThat
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.IOException
 
 @RunWith(AndroidJUnit4::class)
 class AlbumDAOTest {
@@ -23,21 +25,21 @@ class AlbumDAOTest {
             context,
             AlbumDataBase::class.java
         ).build()
-        albumDAO = albumDataBase.albumDao
+        albumDAO = albumDataBase.getAlbumDao()
     }
 
     @After
+    @Throws(IOException::class)
     fun closeDataBase() {
         albumDataBase.close()
     }
 
     @Test
-    fun `should save and read album list`() {
-        val albumListToSave: List<AlbumEntity> = mock()
-        val albumToRead: List<AlbumEntity> = mock()
-
-        albumDataBase.albumDao.saveAll(albumListToSave)
-        assertThat(albumDataBase.albumDao.getAlbumPage(1)).isEqualTo(albumToRead)
+    fun shouldSaveAndReadAlbumList() {
+        val albumList = AlbumEntityFactory.getAlbumEntity(1)
+        albumDAO.saveAll(albumList)
+        val result = albumDAO.getAlbumPage(1)
+        assertThat(result, equalTo(albumList))
     }
 
 }

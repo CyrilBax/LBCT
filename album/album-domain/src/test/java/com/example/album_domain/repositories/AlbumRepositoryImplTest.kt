@@ -28,8 +28,8 @@ class AlbumRepositoryImplTest {
             remoteDataSource
         )
         runBlocking {
-            whenever(remoteDataSource.getAlbumList(page)).thenReturn(mockedResult)
-            whenever(remoteDataSource.getAlbumList(pageWithoutLocal)).thenReturn(mockedResult)
+            whenever(remoteDataSource.getAlbumList()).thenReturn(mockedResult)
+            whenever(remoteDataSource.getAlbumList()).thenReturn(mockedResult)
             whenever(localDataSource.getAlbumList(page)).thenReturn(mockedResult)
             whenever(localDataSource.getAlbumList(pageWithoutLocal)).thenReturn(null)
             whenever(remoteDataSource.isOnline()).thenReturn(true)
@@ -48,8 +48,8 @@ class AlbumRepositoryImplTest {
         runBlocking {
             assertThat(repository.getAlbumList(page)).isEqualTo(mockedResult)
             verify(localDataSource, times(1)).getAlbumList(page)
-            verify(remoteDataSource, times(0)).getAlbumList(page)
-            verify(remoteDataSource, times(1)).isOnline()
+            verify(remoteDataSource, times(0)).getAlbumList()
+            verify(remoteDataSource, times(0)).isOnline()
         }
     }
 
@@ -58,7 +58,7 @@ class AlbumRepositoryImplTest {
         runBlocking {
             repository.getAlbumList(pageWithoutLocal)
             verify(localDataSource, times(2)).getAlbumList(pageWithoutLocal)
-            verify(remoteDataSource, times(1)).getAlbumList(pageWithoutLocal)
+            verify(remoteDataSource, times(1)).getAlbumList()
             verify(localDataSource, times(1)).saveAlbumList(mockedResult)
             verify(remoteDataSource, times(1)).isOnline()
         }
@@ -67,10 +67,11 @@ class AlbumRepositoryImplTest {
     @Test
     fun `should return empty list if device is offline`() {
         runBlocking {
+            whenever(localDataSource.getAlbumList(page)).thenReturn(mockedResult)
             whenever(remoteDataSource.isOnline()).thenReturn(false)
             repository.getAlbumList(pageWithoutLocal)
             verify(localDataSource, times(1)).getAlbumList(pageWithoutLocal)
-            verify(remoteDataSource, times(0)).getAlbumList(pageWithoutLocal)
+            verify(remoteDataSource, times(0)).getAlbumList()
             verify(remoteDataSource, times(1)).isOnline()
         }
     }

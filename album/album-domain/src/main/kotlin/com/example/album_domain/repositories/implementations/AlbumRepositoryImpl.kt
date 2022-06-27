@@ -15,7 +15,7 @@ class AlbumRepositoryImpl @Inject constructor(
         return try {
             val albumList = local.getAlbumList(page)
             if (albumList.isNullOrEmpty() && remote.isOnline()) {
-                val remoteList = remote.getAlbumList(page)
+                val remoteList = remote.getAlbumList()
                 local.saveAlbumList(remoteList)
                 local.getAlbumList(page)
             } else {

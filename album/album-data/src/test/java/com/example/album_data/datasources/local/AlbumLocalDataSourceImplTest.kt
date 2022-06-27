@@ -38,13 +38,17 @@ class AlbumLocalDataSourceImplTest {
             )
             whenever(cacheMapper.mapTo(entityMapperResult)).thenReturn(cacheMapperResult)
             whenever(entityMapper.mapTo(cacheMapperResult)).thenReturn(entityMapperResult)
-            whenever(dataBase.albumDao.getAlbumPage(page)).thenReturn(dataBaseResult)
+            whenever(dataBase.getAlbumDao().getAlbumPage(page)).thenReturn(dataBaseResult)
         }
     }
 
     //region getAlbumList
     @Test
     fun `should return value`() {
+        runBlocking {
+            assertThat(localDataSource.getAlbumList(page)).isEqualTo(cacheMapperResult)
+            verify(dataBase.getAlbumDao(), times(1)).getAlbumPage(page)
+        }
 
     }
 
@@ -56,7 +60,7 @@ class AlbumLocalDataSourceImplTest {
     fun `should save album list`() {
         runBlocking {
             localDataSource.saveAlbumList(albumToSaveMockedData)
-            verify(dataBase.albumDao, times(1)).saveAll(entityMapperResult)
+            verify(dataBase.getAlbumDao(), times(1)).saveAll(entityMapperResult)
         }
     }
     //end region

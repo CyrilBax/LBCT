@@ -17,8 +17,8 @@ class AlbumRemoteDataSourceImpl @Inject constructor(
     private val mapper: Mapper<List<AlbumRemoteModel>, List<AlbumModel>>,
     @ApplicationContext private val context: Context
 ) : AlbumRemoteDataSource {
-    override suspend fun getAlbumList(page: Int): List<AlbumModel> =
-        mapper.mapTo(service.getAlbumList(page))
+    override suspend fun getAlbumList(): List<AlbumModel> =
+        mapper.mapTo(service.getAlbumList())
 
     override suspend fun isOnline(): Boolean {
         val connMgr =

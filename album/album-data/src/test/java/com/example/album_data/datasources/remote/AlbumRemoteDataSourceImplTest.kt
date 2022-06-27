@@ -24,8 +24,6 @@ class AlbumRemoteDataSourceImplTest {
     private val mockedResult: List<AlbumModel> = mock()
     private val mockedDataMapper: List<AlbumRemoteModel> = mock()
 
-    private val page = 1
-
     @Before
     fun setup() {
         remoteDataSource = AlbumRemoteDataSourceImpl(
@@ -34,7 +32,7 @@ class AlbumRemoteDataSourceImplTest {
             mockedContext
         )
         runBlocking {
-            whenever(service.getAlbumList(page)).thenReturn(mockedDataMapper)
+            whenever(service.getAlbumList()).thenReturn(mockedDataMapper)
             whenever(mapper.mapTo(mockedDataMapper)).thenReturn(mockedResult)
         }
     }
@@ -44,7 +42,7 @@ class AlbumRemoteDataSourceImplTest {
     @Test
     fun `should return value`() {
         runBlocking {
-            assertThat(remoteDataSource.getAlbumList(page)).isEqualTo(mockedResult)
+            assertThat(remoteDataSource.getAlbumList()).isEqualTo(mockedResult)
             verify(mapper, times(1)).mapTo(mockedDataMapper)
         }
     }

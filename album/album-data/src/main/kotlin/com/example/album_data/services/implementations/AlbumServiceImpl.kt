@@ -8,5 +8,5 @@ import javax.inject.Inject
 class AlbumServiceImpl @Inject constructor(
     private val service: Service
 ) : AlbumService {
-    override suspend fun getAlbumList(page: Int): List<AlbumRemoteModel> = service.getAlbumList()
+    override suspend fun getAlbumList(): List<AlbumRemoteModel> = service.getAlbumList()
 }
